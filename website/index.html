@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="KADR — локальный AI-инженер для параметрического моделирования, сборок и чертежей в КОМПАС-3D.">
+  <meta name="theme-color" content="#071019">
+  <title>KADR — Local AI Engineering for KOMPAS-3D</title>
+  <link rel="icon" href="assets/kadr-icon-64.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="KADR — главная">
+      <img src="assets/kadr-icon-64.png" alt="" width="34" height="34">
+      <span>KADR</span><small>ENGINEERING AI</small>
+    </a>
+    <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" data-menu-button><span></span><span></span></button>
+    <nav class="nav" aria-label="Основная навигация" data-nav>
+      <a href="#capabilities">Возможности</a>
+      <a href="#demos">Демонстрации</a>
+      <a href="#docs">Документация</a>
+      <a href="#roadmap">Roadmap</a>
+      <a class="lang" href="en/index.html" lang="en">EN</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="live-dot"></span> Early Access · Research Prototype</div>
+        <h1>Локальный AI-инженер<br><span>для КОМПАС-3D.</span></h1>
+        <p class="lead">От инженерной команды к проверяемому Feature Plan, параметрической модели, сборке и чертежу — локально, с контролем происхождения каждого размера.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#publication">О проекте <span>↗</span></a>
+          <a class="button secondary" href="#publication">Скоро <span>·</span></a>
+        </div>
+        <p class="button-note">KADR — закрытый коммерческий проект. Публичная загрузка пока недоступна.</p>
+        <div class="hero-metrics" aria-label="Проверенные показатели">
+          <div><strong>174/174</strong><span>автотестов</span></div>
+          <div><strong>5 + 5</strong><span>M3D / A3D</span></div>
+          <div><strong>v23</strong><span>live-проверка</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Визуализация рабочего процесса KADR">
+        <div class="app-shell">
+          <div class="app-topbar"><span></span><span></span><span></span><b>KADR / workflow illustration</b><em>LOCAL</em></div>
+          <div class="app-body">
+            <aside class="model-tree">
+              <small>МОДЕЛЬ</small>
+              <div class="tree-item active">◈ Assembly</div>
+              <div class="tree-item indent">● Crankshaft</div>
+              <div class="tree-item indent">● Connecting rod</div>
+              <div class="tree-item indent">● Piston</div>
+              <div class="tree-item indent">● Cylinder</div>
+            </aside>
+            <div class="viewport">
+              <svg viewBox="0 0 620 420" role="img" aria-label="Схема кривошипно-шатунного механизма">
+                <defs>
+                  <linearGradient id="metal" x1="0" x2="1"><stop stop-color="#1b3550"/><stop offset=".5" stop-color="#46dbff"/><stop offset="1" stop-color="#0a5b99"/></linearGradient>
+                  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                </defs>
+                <g class="cad-grid"><path d="M40 350H590M80 60V380M200 60V380M320 60V380M440 60V380M560 60V380"/><path d="M30 110H600M30 190H600M30 270H600"/></g>
+                <rect x="460" y="90" width="95" height="230" rx="28" fill="#0b1d2b" stroke="#36d9ff" stroke-width="3"/>
+                <rect x="474" y="138" width="67" height="82" rx="10" fill="url(#metal)"/>
+                <line class="rod" x1="507" y1="180" x2="276" y2="266"/>
+                <circle cx="276" cy="266" r="64" fill="#081725" stroke="#36d9ff" stroke-width="4"/>
+                <line class="crank" x1="276" y1="266" x2="334" y2="236"/>
+                <circle cx="276" cy="266" r="13" fill="#b9f8ff"/>
+                <circle cx="334" cy="236" r="16" fill="#36d9ff" filter="url(#glow)"/>
+                <circle cx="507" cy="180" r="11" fill="#b9f8ff"/>
+                <path d="M138 332h350" stroke="#546b7e" stroke-width="7" stroke-linecap="round"/>
+                <path d="M210 334l45-110h74l46 110" fill="none" stroke="#1b5677" stroke-width="14"/>
+              </svg>
+              <div class="axis"><i>x</i><i>y</i><i>z</i></div>
+              <div class="viewport-label"><span>POSITION</span><strong>90°</strong></div>
+            </div>
+            <aside class="ai-panel">
+              <small>AI ENGINEER</small>
+              <div class="ai-bubble">Создай контрольное положение механизма на 90°.</div>
+              <div class="plan-line ok"><i>✓</i> 5 компонентов</div>
+              <div class="plan-line ok"><i>✓</i> Замыкание цикла</div>
+              <div class="plan-line warn"><i>!</i> Коллизии: не проверены</div>
+              <button type="button" tabindex="-1">Feature Plan подтверждён</button>
+            </aside>
+          </div>
+          <div class="app-status"><span><i></i> KOMPAS API</span><span>Qwen · LOCAL</span><span>Revision 05</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="signal-strip" aria-label="Принципы KADR">
+      <span>LOCAL-FIRST</span><span>PARAMETRIC</span><span>TRACEABLE</span><span>HUMAN-VERIFIED</span>
+    </section>
+
+    <section class="section" id="capabilities">
+      <div class="section-heading reveal">
+        <div><span class="kicker">01 / Возможности</span><h2>Один контур инженерной работы.</h2></div>
+        <p>KADR связывает язык, инженерные данные и нативные документы КОМПАС. Статус каждой функции указан честно.</p>
+      </div>
+      <div class="capability-grid">
+        <article class="capability feature reveal"><span class="status implemented">IMPLEMENTED</span><b>01</b><h3>Text-to-CAD</h3><p>Команды на русском языке превращаются в типизированный план, а неоднозначные параметры — в точные вопросы.</p><div class="mini-command">«Создай вал Ø30, L100…»<i>→</i>Feature Plan</div></article>
+        <article class="capability reveal"><span class="status implemented">IMPLEMENTED</span><b>02</b><h3>Параметрические M3D</h3><p>Детали, операции, ревизии и проверка геометрии через нативный COM API.</p></article>
+        <article class="capability reveal"><span class="status verified">LIVE VERIFIED</span><b>03</b><h3>Сборки A3D</h3><p>Компоненты, координаты и базовые сопряжения. Дискретные положения проверены на эталонном механизме.</p></article>
+        <article class="capability reveal"><span class="status experimental">EXPERIMENTAL</span><b>04</b><h3>Drawing Reader</h3><p>OCR, чтение видов и разрезов, provenance и блокировка построения при неполных данных.</p></article>
+        <article class="capability reveal"><span class="status experimental">EXPERIMENTAL</span><b>05</b><h3>Spatial Engine</h3><p>Связывает размеры с областями, видами и CAD-топологией, не выдавая гипотезы за факты.</p></article>
+        <article class="capability reveal"><span class="status implemented">IMPLEMENTED</span><b>06</b><h3>CDW Generation</h3><p>Создание нативного чертежа из текущей модели с именованными видами и метаданными.</p></article>
+        <article class="capability reveal"><span class="status experimental">EXPERIMENTAL</span><b>07</b><h3>Kinematics Engine</h3><p>Типизированные ограничения и аналитические положения. Нативная динамика — следующий контрольный этап.</p></article>
+        <article class="capability reveal"><span class="status implemented">LOCAL</span><b>08</b><h3>Qwen + Ollama</h3><p>Локальная обработка запросов без передачи инженерных данных во внешний AI API.</p></article>
+      </div>
+    </section>
+
+    <section class="section demos" id="demos">
+      <div class="section-heading reveal"><div><span class="kicker">02 / Демонстрации</span><h2>Проверено на реальных сценариях.</h2></div><p>Не концепт-рендеры: интерфейс и окно КОМПАС из фактической разработки проекта.</p></div>
+      <div class="demo-grid">
+        <figure class="demo-card wide reveal">
+          <div class="image-frame"><img class="focus-assembly" src="assets/kompas-assembly-real.png" alt="Реальная многокомпонентная сборка вала и шкива в КОМПАС-3D" loading="lazy"></div>
+          <figcaption><div><span class="status verified">REAL KOMPAS · A3D</span><h3>Многокомпонентная сборка</h3></div><p>Вал и шкив: реальный результат live-проверки сборочного API КОМПАС-3D.</p></figcaption>
+        </figure>
+        <figure class="demo-card reveal">
+          <div class="image-frame contain"><img src="assets/kadr-ocr-real.png" alt="Реальный результат распознавания полумуфты в интерфейсе KADR" loading="lazy"></div>
+          <figcaption><div><span class="status experimental">OCR / SPATIAL</span><h3>Полумуфта 371.051.003</h3></div><p>Контрольный кейс чтения размеров и блокировки неоднозначностей.</p></figcaption>
+        </figure>
+        <article class="demo-card data-card reveal">
+          <div class="data-top"><span class="status verified">CHECKPOINT</span><span>2026.10.18</span></div>
+          <strong class="big-number">174<span>/174</span></strong><p>автоматических теста</p>
+          <div class="bar"><i></i></div>
+          <ul><li><b>5</b> M3D компонентов</li><li><b>5</b> A3D положений</li><li><b>1 DOF</b> аналитическая модель</li></ul>
+        </article>
+      </div>
+      <div class="truth-banner reveal"><strong>Инженерная честность встроена в архитектуру.</strong><span>Если размер не доказан, KADR задаёт вопрос. Если live-проверка не выполнена, функция не получает статус VERIFIED.</span></div>
+    </section>
+
+    <section class="section" id="docs">
+      <div class="section-heading reveal"><div><span class="kicker">03 / Документация</span><h2>Запуск без догадок.</h2></div><p>Portable остаётся локальным пакетом. КОМПАС-3D и его лицензия устанавливаются отдельно.</p></div>
+      <div class="docs-layout">
+        <div class="terminal reveal"><div class="terminal-bar"><i></i><i></i><i></i><span>PowerShell</span></div><pre><code><span class="muted"># Проверка portable</span>
+.\START_KADR.cmd --check-only
+
+<span class="muted"># Запуск</span>
+.\START_KADR.cmd
+
+<span class="muted"># Запуск тестов исходной версии</span>
+.\.venv313\Scripts\python.exe -m unittest \
+  discover -s tests -p "test_*.py" -v</code></pre></div>
+        <div class="doc-links reveal">
+          <a href="docs.html#install"><span>01</span><div><strong>Установка</strong><small>Portable и исходная версия</small></div><b>↗</b></a>
+          <a href="docs.html#requirements"><span>02</span><div><strong>Системные требования</strong><small>Windows, КОМПАС, RAM и GPU</small></div><b>↗</b></a>
+          <a href="docs.html#limitations"><span>03</span><div><strong>Известные ограничения</strong><small>Что нельзя считать production-ready</small></div><b>↗</b></a>
+          <a href="#roadmap"><span>04</span><div><strong>Roadmap</strong><small>Контрольные этапы развития</small></div><b>↗</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section roadmap-section" id="roadmap">
+      <div class="section-heading reveal"><div><span class="kicker">04 / Roadmap</span><h2>От CAD-ядра к инженерной системе.</h2></div><p>Каждый этап получает статус только после тестов и live-проверки.</p></div>
+      <ol class="roadmap">
+        <li class="done reveal"><span>00</span><div><small>VERIFIED BASELINE</small><h3>CAD Core + Reference Kinematics</h3><p>174 теста, M3D/CDW/A3D, crank-slider.</p></div></li>
+        <li class="next reveal"><span>01</span><div><small>NEXT</small><h3>Native Kinematics</h3><p>Динамические сопряжения и воспроизводимый A3D.</p></div></li>
+        <li class="reveal"><span>02</span><div><small>PLANNED</small><h3>Collision Detection</h3><p>Коллизии, минимальные зазоры и отчёт.</p></div></li>
+        <li class="reveal"><span>03</span><div><small>PLANNED</small><h3>Spatial Engine</h3><p>Устойчивая связь evidence и BREP-топологии.</p></div></li>
+        <li class="reveal"><span>04</span><div><small>PLANNED</small><h3>Drawing-to-3D</h3><p>Реконструкция по многовидовым чертежам.</p></div></li>
+        <li class="reveal"><span>05</span><div><small>PLANNED</small><h3>Production Drawing Engine</h3><p>Проверяемый комплект документации по ЕСКД.</p></div></li>
+        <li class="reveal"><span>06</span><div><small>VISION</small><h3>V6 Engine Project</h3><p>Сложная многоуровневая сборка и спецификация.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="section publication" id="publication">
+      <div class="publication-card reveal">
+        <div><span class="kicker">PUBLICATION STATUS</span><h2>Развиваем KADR.<br>Коммерческое ядро остаётся закрытым.</h2></div>
+        <div class="publication-checks"><p><i>✓</i> Локальная обработка инженерных данных</p><p><i>✓</i> Параметрические документы КОМПАС</p><p><i>○</i> Закрытое коммерческое ядро</p><p><i>○</i> Ранний доступ — в подготовке</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#top"><img src="assets/kadr-icon-64.png" alt="" width="28" height="28"><span>KADR</span></a><p>Local AI Engineering for KOMPAS-3D · Early Access</p><p>© <span data-year>2026</span> KADR Project</p></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
+

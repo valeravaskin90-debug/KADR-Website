@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Документация KADR: установка, требования, команды и ограничения.">
+  <meta name="theme-color" content="#071019"><title>Документация — KADR</title>
+  <link rel="icon" href="assets/kadr-icon-64.png"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header scrolled" data-header><a class="brand" href="index.html"><img src="assets/kadr-icon-64.png" alt="" width="34" height="34"><span>KADR</span><small>DOCS</small></a><button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" data-menu-button><span></span><span></span></button><nav class="nav" data-nav><a href="index.html">Главная</a><a href="#install">Установка</a><a href="#commands">Команды</a><a href="#limitations">Ограничения</a><a class="lang" href="en/docs.html" lang="en">EN</a></nav></header>
+  <main class="docs-page" id="main">
+    <aside class="docs-sidebar"><span>Документация</span><a href="#install">Установка</a><a href="#requirements">Требования</a><a href="#kompas">Работа с КОМПАС</a><a href="#commands">Примеры команд</a><a href="#limitations">Ограничения</a><a href="#status">Статусы</a></aside>
+    <article class="docs-content">
+      <div class="docs-hero"><span class="kicker">KADR / DOCS</span><h1>Запуск и границы системы.</h1><p>Документация контрольной точки 2026-10-18. KADR находится в статусе Early Access / Research Prototype.</p></div>
+      <section id="install"><span class="doc-index">01</span><h2>Установка Portable</h2><ol><li>Установите КОМПАС-3D с действующей лицензией и один раз запустите его.</li><li>Проверьте SHA-256 загруженного архива.</li><li>Распакуйте весь каталог на NTFS или exFAT.</li><li>Запустите <code>START_KADR.cmd --check-only</code>.</li><li>После успешной проверки запустите <code>START_KADR.cmd</code>.</li></ol><div class="callout">КОМПАС-3D и его лицензия не входят в portable. Интернет после полной распаковки и наличия модели не требуется для локального AI.</div></section>
+      <section id="requirements"><span class="doc-index">02</span><h2>Системные требования</h2><div class="spec-table"><div><b>OS</b><span>Windows 10/11 x64</span></div><div><b>CAD</b><span>КОМПАС-3D; live-проверено на v23</span></div><div><b>RAM</b><span>16 ГБ или больше рекомендуется</span></div><div><b>GPU</b><span>NVIDIA 8 ГБ VRAM рекомендуется; CPU медленнее</span></div><div><b>Диск</b><span>10+ ГБ для portable и место под проекты</span></div></div></section>
+      <section id="kompas"><span class="doc-index">03</span><h2>Работа с КОМПАС</h2><p>KADR подключается через Windows COM API. Закройте зависшие экземпляры КОМПАС перед диагностикой. Каждая созданная модель требует визуальной и инженерной проверки. Live-скрипты разработчика запускаются отдельно и не входят в обычный CI.</p></section>
+      <section id="commands"><span class="doc-index">04</span><h2>Примеры команд</h2><div class="command-list"><code>Создай втулку: наружный Ø40, внутренний Ø20, длина 60 мм</code><code>Создай вал Ø30 длиной 100 мм, добавь ступень Ø40 × 25</code><code>Добавь шпоночный паз 40 × 8 × 4 мм от начала 10 мм</code><code>Создай чертёж текущей детали</code><code>Покажи историю и отмени последнее изменение</code></div></section>
+      <section id="limitations"><span class="doc-index">05</span><h2>Известные ограничения</h2><ul><li>Нативная динамическая кинематика, collision detection и зазоры ещё не VERIFIED.</li><li>OCR/Vision не гарантируют привязку каждого размера и не должны выдумывать значения.</li><li>Production-чертежи и расчёты требуют проверки инженером.</li><li>Другие версии КОМПАС требуют отдельной live-проверки.</li><li>Сложные многоуровневые сборки и V6 — план, а не готовая функция.</li></ul></section>
+      <section id="status"><span class="doc-index">06</span><h2>Как читать статусы</h2><div class="status-legend"><p><span class="status implemented">IMPLEMENTED</span> Реализовано и покрыто автоматическими тестами.</p><p><span class="status verified">LIVE VERIFIED</span> Фактически выполнено в КОМПАС на указанной конфигурации.</p><p><span class="status experimental">EXPERIMENTAL</span> Архитектура или прототип есть, но production-надежность не доказана.</p><p><span class="status">PLANNED</span> Есть в roadmap, но не заявляется как рабочая возможность.</p></div></section>
+    </article>
+  </main>
+  <footer><a class="brand" href="index.html"><img src="assets/kadr-icon-64.png" alt="" width="28" height="28"><span>KADR</span></a><p>Local AI Engineering for KOMPAS-3D</p><p>© <span data-year>2026</span> KADR Project</p></footer><script src="app.js" defer></script>
+</body></html>
+
