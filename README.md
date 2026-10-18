@@ -32,4 +32,3 @@ The download button remains “Coming soon” until an approved distribution cha
 All rights reserved by the project owner. No MIT/Apache or other open-source license is granted to the KADR core or these website assets. KOMPAS-3D trademarks and interface elements belong to their respective owners. This project is not affiliated with ASCON.
 
 See ASSET_PROVENANCE.md for screenshot sources and review notes.
-

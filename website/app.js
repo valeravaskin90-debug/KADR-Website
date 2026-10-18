@@ -39,4 +39,3 @@
     node.textContent = String(new Date().getFullYear());
   });
 })();
-

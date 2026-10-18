@@ -8,4 +8,3 @@
 - No KOMPAS SDK, third-party library binary, model, user drawing, or CAD binary is included.
 
 The owner must approve these assets with the first publication. Ownership of KADR assets is asserted by the owner-provided project context; a standalone external license document for the logo was not found. KOMPAS interface marks remain the property of their rights holders.
-

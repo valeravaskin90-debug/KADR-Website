@@ -136,4 +136,3 @@ footer { max-width: var(--max); min-height: 125px; margin: 0 auto; padding: 0 5v
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }*, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }.reveal { opacity: 1; transform: none; }
 }
-
